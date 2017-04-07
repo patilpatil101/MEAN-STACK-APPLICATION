@@ -1,0 +1,198 @@
+<!--========================================== Head ==========================================================================================================================------------------------->
+<head>
+    <meta charset="utf-8" />
+    <title>BMRCL</title>
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <script src="lib/jquery-1.7.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+	
+ </head>
+<!--***************************************** Navigation Bar Contents ****************************************************************-->
+
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand">Bangalore Metro Rail Corporation Limited</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+         <li class="active"><a href="/route">  About Us</a></li>
+                        <li><a href="/service">Contact Us</a></li>
+                       
+						
+                    </ul>
+					<ul class="pull-right nav navbar-nav">
+						<li><a ng-click="logout()">Logout</a></li>
+					</ul>
+                </div>	
+            </div>
+        </div>
+    </div>
+	
+	<div ng-cloak class="tabsdemoStaticTabs">
+         <md-content class="md-padding" >
+            <md-tabs class="md-accent" md-dynamic-height >
+			
+               <md-tab id="route" >
+                  <md-tab-label>Route</md-tab-label>
+                  <md-tab-body>
+				  
+			<div  class="regform"> 
+				  <br>Route Short Name:<input type="text" placeholder="e.g. BYPH"> &nbsp&nbsp
+				      Route Long Name :<input type="text" placeholder="e.g. Baiyappanhalli">&nbsp&nbsp
+				      Route Type      :<input type="text" placeholder="Route Type"/>
+					  Route Url       :<input type="text" placeholder="Route Url"/>
+				  
+	<div style="text-align:left;">
+	   <h2> Select Direction</h2>
+	   <h4>From:</h4>   <p class="contact"></p><select name="routeselection" id="{{route}}" ng-model="route" ng-init="route='0'">
+	   <option ng-repeat="option in data.availableRoutes" value="{{option.id}}">{{option.name}}</option>
+	   </select>
+	<div>			
+		<h4>To:</h4>   <p class="contact2"></p><select name="routeselection2" id="{{route}}" ng-model="route2" ng-init="route='0'">
+		<option ng-repeat="option in data2.availableRoute" value="{{option2.id}}">{{option.name}}</option>
+		</select>			
+   </div>						
+   </div>
+                 <div id="create" style="width:400px; margin:0 auto;">
+					<a  href="/register" ><input class="button" value="   Create    " type="submit"></input></a>
+                </div>
+				
+			</div>
+				  
+				  </md-tab-body>
+                  </md-tab>
+<!--************************************ Trips *********************************************************-->			  
+                  <md-tab id="trips">
+					<md-tab-label>Trips</md-tab-label>
+					<md-tab-body>
+			<form id="tripsform" name="tripfrm" ng-submit="trips()"> 
+			
+				<div style="text-align:left;">
+					<h4>Route Short Name</h4>
+					<p class="contact"></p><select name="routeselection" id="{{route}}" ng-model="route" ng-init="route='0'">
+					<option ng-repeat="option in data1.routeshortname" value="{{option.id}}">{{option.name}}</option>
+					</select>
+					
+					 &nbsp&nbsp Start Date:<input type="text" ng-model="startdate" placeholder="Enter start date"> &nbsp&nbsp
+				     End Date  :<input type="text" ng-model="enddate"placeholder="Enter end date">&nbsp&nbsp
+				   
+				</div>
+				Select the days <br>
+				<input type="checkbox" ng-model="all"> Check all<br>
+					<input type="checkbox" ng-checked="all">Monday
+					<input type="checkbox" ng-checked="all">Tuesday
+					<input type="checkbox" ng-checked="all">Wednesday
+					<input type="checkbox" ng-checked="all">Thursday<br>
+					<input type="checkbox" ng-checked="all">Friday &nbsp
+					<input type="checkbox" ng-checked="all">Saturday 
+					<input type="checkbox" ng-checked="all">Sunday<br><br>
+					
+		&nbsp&nbsp <h4>Trip head sign:<h4><input type="text" ng-model="headsignfrom" placeholder="e.g. Baiyappanhalli"> &nbsp TO &nbsp
+				     <input type="text" ng-model="headsignto" placeholder="e.g. Mysore Road"><br><br>	
+					 
+					 
+					 
+					 
+					  
+<!-- LIST -->					  
+					  
+			<div class="panel panel-default">
+                <!-- Default panel contents -->
+              <div class="panel-heading"><span class="lead">List of Trips </span></div>
+              <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>ID.</th>
+                              <th>Trip Head Sign</th>
+                              <th>Route</th>
+                              <th>Running Days</th>
+                              <th width="100">
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in ctrl.users">
+                              <td><span ></span></td>
+                              <td><span ></span></td>
+                              <td><span ng-bind="u.route"></span></td>
+                             
+                              <td>
+							
+                              <button type="button" ng-click="ctrl.edit(u.id)" 
+							  class="btn btn-success custom-width">Edit</button>  
+							  
+							  <button type="button" ng-click="ctrl.remove(u.id)" 
+							  class="btn btn-danger custom-width">Remove</button>
+							  
+							  <button type="button" ng-click="go()" 
+							  class="btn btn-success custom-width">Create Stops Times</button>
+							  <div id="popup1" class="overlay"></div>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+		  
+		  
+		   <div id="create" style="width:400px; margin:0 auto;">
+						<input class="button" id="create" value="   Create    " type="submit"></input>
+					  </div><br>
+<!-- -->		  
+		  
+			</form>
+					</md-tab-body>
+					
+                  </md-tab>
+				 
+				  <md-tab id="service">
+					<md-tab-label>Service</md-tab-label>
+					<md-tab-body>
+					Item Service
+				
+					</md-tab-body>
+                  </md-tab>
+				  
+				  <md-tab id="stops">
+					<md-tab-label>Stops</md-tab-label>
+					<md-tab-body>
+					Arrival Time:<input type="text"> &nbsp&nbsp
+				    Dept Time   :<input type="text">&nbsp&nbsp
+					</md-tab-body>
+                  </md-tab>
+				  
+				  <md-tab id="gcm">
+					<md-tab-label>Messaging System</md-tab-label>
+					<md-tab-body>Messaging System using GCM<br/></md-tab-body>
+                  </md-tab>
+				  
+				  
+            </md-tabs>
+         </md-content>
+		 
+      </div>
+				
+	  
+	   </div>
+<!--***************************************** Processing Icon *********************************************************-->
+    <img class="loading" ng-show="loading" style=" background-color: #69757f;
+																	  opacity: 0.8;
+																	  position: absolute;
+																	  left: 0px;
+																	  top: 0px;
+																	  z-index: 100;
+																	  height: 100%;
+																	  width: 100%;
+																	  overflow: hidden;
+																	  background-image: url('images/game_img1.gif');
+																	  background-position: center;
+																	  background-repeat: no-repeat;" /> 
+
+	
+<!--=========================================================================================================================================================================------------------------->	
+			
+     
+
+

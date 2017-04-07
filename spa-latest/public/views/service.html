@@ -1,0 +1,72 @@
+<!--========================================== Head ==============================================================================================================-------------------------------------->
+<head>
+    <meta charset="utf-8" />
+    <title>BMRCL</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <script src="lib/jquery-1.7.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+   
+</head>
+
+<!--***************************************** Navigation Bar Content ****************************************************************-->
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand">Bangalore Metro Rail Corporation Limited</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                  <li><a href="/route">  About US</a></li>
+   <li class="active"><a href="/service">Contact Us</a></li>
+			 	
+                </ul>
+				<ul class="pull-right nav navbar-nav">
+						<li><a ng-click="logout()">Logout</a></li>
+					</ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--***************************************** pageName comes from ServiceController ****************************************************************-->
+	
+<div class="container" style="text-align:center;">
+    <h1>{{pageName}}</h1>
+</div>
+
+<!--***************************************** Contents ****************************************************************-->
+<div class="modal-content">
+
+  <div class="modal-body">
+ 
+  <div id="textfield">	
+    Address: 
+				      C-DAC, 1, Old Madras Road, Opposite Hal Aero Engine Division, Bengaluru, Karnataka 560038 <br>
+    Telephone Number: 080 2534 0861 <br>
+	Email Address   : cdacb.mars@cdac.in
+    
+	</div>
+
+  </div>
+ 
+</div>
+
+<!--***************************************** Processing Icon ****************************************************************-->
+    <img class="loading" ng-show="loading" ng-show="loading" style=" background-color: #69757f;
+																	  opacity: 0.8;
+																	  position: absolute;
+																	  left: 0px;
+																	  top: 0px;
+																	  z-index: 100;
+																	  height: 100%;
+																	  width: 100%;
+																	  overflow: hidden;
+																	  background-image: url('images/game_img1.gif');
+																	  background-position: center;
+																	  background-repeat: no-repeat;" /> 
+
+	
+<!--===============================================================================================================================================---------------->	
+	

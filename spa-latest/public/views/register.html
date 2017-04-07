@@ -1,0 +1,84 @@
+<!--======= Head ============================================================================================================================================================------------------------->
+<head>
+<title>Agency Registration</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/demo.css"  media="all" />
+</head>
+<!--***************************************** Body ****************************************************************-->
+<body>
+	<div class="container">
+			<!--top bar -->
+            <div class="freshdesignweb-top">
+                <a href="http://www.cdac.in" target="_blank">Home</a>
+                <span class="right">
+                    <a href="/">
+                        <strong>Back to the Login Page</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--top bar -->
+			<header>
+				<h1>Agency Registration</h1>
+            </header> 
+<!--***************************************** Main Form(frm) ****************************************************************-->
+		
+      <div  class="regform">
+    		<form id="contactform" name="frm" ng-submit="register()"> 
+
+    			<p class="contact"><label for="name">Agency Name</label></p> 
+    			<input id="name"       name="name"       style="text-indent:20px;" placeholder="Enter Agency Name"     ng-required="true" ng-model="agencyname"  tabindex="1"  type="text"> 
+    			 
+    			<p class="contact"><label for="email">Agency Email</label></p> <p ng-style="errorStyle">{{emailValidation}}</p>
+    			<input id="email"      name="email"      style="text-indent:20px;" ng-blur="checkMailStatus()" placeholder="agencyname@domain.com" ng-required="true" ng-model="agencyemail" tabindex="2"  type="email">
+				
+                <p class="contact"><label for="password">Create a password</label></p> 
+    			<input id="password"   name="password" 	 style="text-indent:20px;" placeholder="Enter Password"       autocomplete="off"  ng-required="true" ng-model="pass"        tabindex="4"  type="password">
+				
+                <p class="contact"><label for="repassword">Confirm your password</label></p> <span style="color:red" ng-show="pass !== repass">Password does not match</span>
+    			<input id="repassword" name="repassword" style="text-indent:20px;" placeholder="Re-enter Password"    autocomplete="off"  ng-required="true" ng-model="repass"      tabindex="5"  type="password" ><br> 
+<!--***************************************** Route Section ****************************************************************-->
+                <p class="contact"><label>Route Type</label></p> 
+				<select name="routeselection" id="{{route}}" ng-model="route" ng-init="route='0'">
+				<option ng-repeat="option in data.availableRoutes" value="{{option.id}}">{{option.name}}</option>
+				</select>
+<!--************************************************************************************************************-->
+	           <br><br><p class="contact"><label for="phone">Agency Website URL</label></p> 
+               <input id="weburl" name="weburl" style="text-indent:20px;" placeholder="Enter Website URL"  ng-required="true" ng-model="weburl" tabindex="6" type="text"> <br>
+			
+				<label for="mobile">Mobile phone</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span style="color:red" ng-show="frm.mobile.$error.pattern">Please enter valid number!</span><p ng-style="errorStyle">{{mobileNumberValidation}}</p>
+			   <input id="mobile"    type="number" ng-model="mobile" style="text-indent:20px;"  placeholder="e.g.7888226600" name="mobile" tabindex="7" ng-pattern="/^[6-9][0-9]{9}$/" >
+    
+			   <label for="phone">Work Telephone</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span style="color:red" ng-show="frm.phone.$error.pattern">Please enter valid number!</span>
+    	       <br><input id="phone" type="number" ng-model="phone"  style="text-indent:20px;"  placeholder="e.g.020123456"  name="phone"  tabindex="8" ng-pattern="/^[6-9][0-9]{9}$/" ><br><br>
+			 
+			   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			   <button class="register" id="register" type="submit" >Register</button><font size="4px"><button id ="buttonClick" ng-click="reset()">Reset</button></font><br><br><br>
+			
+                        
+          </form> 
+		 
+		</div>	
+
+<!--***************************************** Processing Icon ****************************************************************-->
+
+	 <img class="loading" ng-show="loading" ng-show="loading" style=" background-color: #69757f;
+																	  opacity: 0.8;
+																	  position: absolute;
+																	  left: 0px;
+																	  top: 0px;
+																	  z-index: 100;
+																	  height: 100%;
+																	  width: 100%;
+																	  overflow: hidden;
+																	  background-image: url('images/game_img1.gif');
+																	  background-position: center;
+																	  background-repeat: no-repeat;" /> 	 
+<!--*************************************************************************************************************************-->
+
+			
+	</div>		
+	 </body>	
+<!--==========================================================================================================================================================================------------------------>

@@ -1,0 +1,256 @@
+.form{
+	background: #F8F8F8  ; width:600px;margin:0 auto; padding-left:50px; padding-top:25px;padding-bottom:22px;
+}
+.form fieldset{border:0px; padding:0px; margin:0px;}
+.form p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
+
+.regform{
+	background: #F8F8F8  ;width:500px; margin:0 auto; padding-left:50px; padding-right:50px; padding-top:25px;padding-bottom:22px;
+}
+.regform fieldset{border:0px; padding:0px; margin:0px;}
+.regform p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
+
+button {
+    background-color:transparent;
+    border:0;
+}
+
+p.contact input {
+    float: right;
+}
+p.contact::after { 
+     content: "*";
+	 font-size: 25px; 
+	 color: red;
+}
+.form input[type="text"] { width: 400px; }
+.form input[type="email"] { width: 400px; }
+.form input[type="password"] { width: 400px; }
+.form label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
+.form input, textarea { background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px; }
+.form input:focus, textarea:focus { border: 2px solid #ff5400; background-color: rgba(220, 250, 250, 1); }
+.form .select-style {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+   background-image: url(../images/select-arrow.png), 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 0px solid #FFF;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+.form .gender {
+  width:410px;
+  }
+.form input.button      { background: #4b8df9; display: inline-block; padding: 10px 50px 12px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.form button.button    { background: #4b8df9; display: inline-block; padding: 10px 50px 12px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.form button.register{ background: #4b8df9; display: inline-block; padding: 10px 50px 12px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.form input.button:hover	{ background-color: #2a78f6; }
+.form button.button:hover	{ background-color: #2a78f6; }
+.form input.register:hover{ background-color: #2a78f6; }
+
+.form button.button    { width: 70%; height: 100%; right : 20%;}
+.form button.register{ width: 40%;height: 100%;right : 10%;}
+
+
+
+.regform input[type="text"] { width: 400px; }
+.regform input[type="email"] { width: 400px; }
+.regform input[type="password"] { width: 400px; }
+.regform input[type="number"] { width: 400px; }
+.regform label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
+.regform input, textarea { background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px; }
+.regform input:focus, textarea:focus { border: 2px solid #ff5400; background-color: rgba(220, 250, 250, 1); }
+.regform .select-style {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+   background-image: url(../images/select-arrow.png), 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 0px solid #FFF;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+.regform .gender {
+  width:410px;
+  }
+.regform input.button      { background: #4b8df9; display: inline-block; padding: 10px 50px 12px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.regform button.button    { background: #4b8df9; display: inline-block; padding: 10px 50px 12px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.regform button.register{ background: #4b8df9; display: inline-block; padding: 10px 50px 12px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.regform input.button:hover	{ background-color: #2a78f6; }
+.regform button.button:hover	{ background-color: #2a78f6; }
+.regform input.register:hover{ background-color: #2a78f6; }
+
+.regform button.button    { width: 70%; height: 100%; right : 20%;}
+.regform button.register{ width: 40%;height: 100%;right : 10%;}
+
+a.hover            { text-decoration: none; color:black }
+
+
+input[type=text], input[type=password], input[type=email],input[type=tel],input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 10%;
+    border-radius: 20%;
+}
+  .required{
+  after { content:"*";}
+}
+
+#header{
+	 font-size: 40px;
+	 text-align: center;
+     
+}
+#forgotpassword{
+text-align: center;	
+}
+
+#footer{
+	position:fixed;
+	bottom:0px;
+    background-color:black;
+	color:white;
+    width:100%;
+	height: 28px;
+    text-align:center;
+}
+		
+#buttonClick:hover {
+color: red;  }
+#visibility:hover {
+color: red;  }
+
+
+    font-family: Verdana, monospace;
+}
+body {
+  background: url('http://subtlepatterns.com/patterns/congruent_outline.png') repeat 0 0;
+  font-family: Verdana, monospace;
+  
+}
+section {
+  background: #fff;
+  box-shadow: 2px 2px 0 1px rgba(0, 0, 0, .1);
+  margin: 3em auto;
+  padding: 2em;
+  width: 600px;
+}
+input {
+  font-size: 1em;
+  padding: 1em;
+}
+
+
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+ 
+}
+#username
+{
+  background-image:url(../images/username.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#password
+{
+  background-image:url(../images/password.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#repassword
+{
+  background-image:url(../images/confirm.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#emailid
+{
+  background-image:url(../images/email.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#email
+{
+  background-image:url(../images/email.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#name
+{
+  background-image:url(../images/agency_name.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#weburl
+{
+  background-image:url(../images/link.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#mobile{
+  background-image:url(../images/mobile.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#phone
+{
+  background-image:url(../images/work_phone.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#newpassword
+{
+  background-image:url(../images/password.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#confirmpassword
+{
+  background-image:url(../images/confirm.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+#agencyemail
+{
+  background-image:url(../images/email.png); 
+  background-repeat: no-repeat; 
+  background-position: 6px 9px;
+}
+
